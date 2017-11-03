@@ -8,6 +8,8 @@ services:
     ports:
       - "55000:5000"
     restart: unless-stopped
+    environment:
+            REGISTRY_STORAGE_DELETE_ENABLED : "True"
 
 volumes:
   registry:
