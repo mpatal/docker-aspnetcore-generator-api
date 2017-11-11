@@ -9,7 +9,8 @@ services:
         ports:
             - 8111:8111
     teamcity-agent:
-        image: jetbrains/teamcity-agent:2017.1.5
+        image: marvinpatal/teamcity-agent-with-compose:2017.1.5
+        build: ./agent
         environment:
             SERVER_URL: http://teamcity:8111
         volumes:
